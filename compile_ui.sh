@@ -1,0 +1,1 @@
+pyuic5 -x webinar_ui/appwindow.ui -o webinar_ui/AppWindow.py
