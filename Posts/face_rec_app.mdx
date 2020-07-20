@@ -1,0 +1,95 @@
+---
+title: Building a simple facial recoginition application with PyQt5
+---
+
+At the webinar, Temi gave us a fantastic overview of the mathematics and intuition of facial
+recognition, and I talked us through building the 'Horrible boss app'. I appreciate that it would 
+have been a lot of information to digest in such a short time, so in this blog post, I will be 
+going into more detail on the process of developing the application. 
+
+## House Keeping
+First a little bit of housekeeping.
+- You should have Qt Creator or Qt Designer installed.
+- You should have Python installed (duh?).
+- You should (ideally) have a virtual environment set up for this project. (requirements file.)
+
+If you are unsure about any of the above steps, go and check this post on setting up your 
+development machine for python application development with maximum pain relief. I'll wait...
+
+Back? Okay we move. 
+
+Just to be sure that you are acually ready, run the following commands in your terminal. 
+
+```python -V```
+
+If you get a respnse of 
+
+```Python 3.X.X```
+
+we're good. 
+
+```workon```
+
+If you do not have any virtual environments installed, you should get an empty response. 
+
+If you get anything else for the above commands, go back to the post. I'm not in a hurry. 
+
+## Setting up your project
+
+Remember how I said you ideally want to have a virtual envronment setup for your project? Let's talk 
+a little but about why that is important. A virtual environment is essentially a container which holds a 
+copy of your python installation, and any other python libraries you have installed. The real benefit of this is
+that you do not 'pollute' your main python installation with all the other fancy libraries you install as you build your great projects,
+because sometimes these libraries do not play very nice with each other. We will avoid this problem in our project. 
+
+- Create a new folder, in your documents folder, and name it after the project. If you want to feel like a hacker,
+you can use ```mkdir ~/Documents/webinar_project```. In my case I just navigated to my documents folder using my file explorer, 
+and created a folder called ```webinar_project```. YMMV. 
+- Download the requirements.txt file, and move it to the folder you just created. 
+- On your terminal change your directory to the ```webinar_project``` directory.
+- Enter the following command:
+```mkvirtualenv -a $(pwd) -r requirements.txt webinar_project_env```
+
+```mkvirtualenv...webinar_project_env``` means we are asking virtualenvwrapper to make a new virtual environment for us, and to name it ```webinar_project_env```. 
+
+```-a $(pwd)``` means the new virtual environment belongs to the current directory, and ```-r requirements.txt``` means that it should install all the python libraries
+listed in ```requirements.txt``` into our fresh new virtual environment.
+
+This blog post makes the assumtion that you have a working knowledge of Python, and the code I'll be talking you
+through in the coming sections wouldn't look like gibberish. That said if you have done a little bit of python programming, 
+you should have an idea of what development environment you like to use. I usually use PyCharm, and I would highly recommend it
+as your IDE. However, you can follow along using any text editor you desire. 
+
+## The user interface
+
+Just as web developers like to harp on about the front end, and back end of their websites/webapps, you also have that consideration to make. 
+The Qt development framework includes a lot of user interface elements, which can be put together to create quite fantastic applications. I always think
+it is a good idea to separate elements of your application as much as can as this makes it easier to manage. Especially in situations where you are not the 
+sole developer. 
+
+You could write the user interface entirely in Python using PyQt5, however if you want to build anything even remotely complex, it's best you use the Qt Creator
+application. Our project is relaively simple, but we will be using Qt Creator so we can get used to its interface, and understand its quirks and features. 
+
+Fire up Qt Creator, and select File > New File or Project. In the resulting dialog window, select Qt under Files and Classes and select Qt Designer Form. The next window shows you 
+a few options with preconfigured templates to get you up and running. We will select MainWindow, which is set up to be a user interface with a menu bar and a status bar. Follow through with the 
+prompts, and make sure to save the resulting file in the same ```webinar_project``` folder you created earlier. Let me know in the comments if I should make a separate post on the Qt Creator user 
+interface. But for now, let's march on.
+
+You should have in front now of you a pretty unremarkable canvas. But this is great, because now you can be picasso. In the middle of your window you should have your canvas which shows you how the ui elements 
+you place will be laid out. To the left of this canvas you have your widget box, where you can drag and drop ui elements from. On the top right you have a widget inspector, which shows you what widgets have 
+been placed in your main window. Below that you have the property inspector, which is where you alter the properties of your placed widgets. If the layout you see is not like what I am describing, you can select
+(on the Qt Creator menubar) Window > Views > Reset Default Layout. 
+
+Side note: Widgets is just another word for ui elements such as buttons, text boxes, list views et cetera.
+
+On the object inspector (top right), you should see a MainWindow, and nested within it you should see 
+
+
+
+
+
+
+
+
+
+ 
