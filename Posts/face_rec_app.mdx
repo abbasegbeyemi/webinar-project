@@ -82,7 +82,18 @@ been placed in your main window. Below that you have the property inspector, whi
 
 Side note: Widgets is just another word for ui elements such as buttons, text boxes, list views et cetera.
 
-On the object inspector (top right), you should see a MainWindow, and nested within it you should see 
+On the object inspector (top right), you should see a MainWindow, and nested within it you should see the central widget, menubar object, and statusbar. Delete the menubar and statusbar as we dont need them. We keep the
+central widget however, as it is going to be the container that holds all our other widgets.
+
+When building applications, you always want to take the layout of your ui elements into account. Qt widgets provides layout elements, which maintain the relationship between your widgets, and ensures that they are
+properly spaced especially when your window is resized.
+
+Let's start placing widgets into the central widget.
+
+From the widget box on the left, drag two push puttons onto the canvas. Select the buttons, right click them and choose layout > Horizontally. In the property inspector, ![image]()
+
+Next we want a group box that will hold the list widget, which shows the names
+of employees who have signed in.
 
 
 
