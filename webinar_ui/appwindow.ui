@@ -11,42 +11,99 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Employee App</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+background-color: white;
+}
+
+QPushButton {
+background-color: rgb(252, 205, 97);
+color: black;
+border: 2px solid rgb(252, 205, 97);
+border-radius: 20px;
+}
+
+QPushButton:hover{
+color: white;
+background-color: rgb(255, 153, 131);
+border: 2px solid rgb(255, 153, 131);
+}
+
+QLabel#label_video_feed{
+border: 2px solid rgb(252, 205, 97);
+}
+
+QLabel#employees_label{
+background-color: rgb(252, 205, 97);
+color: black;
+}
+
+QListWidget#listwidget_signed_in{
+border: 2px solid rgb(252, 205, 97);
+font-size: 20pt;
+font-weight: bold;
+}
+
+QListWidget::item
+{
+color:black;
+border-bottom: 2px solid rgb(252, 205, 97);
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label_video_feed">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>3</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Loading video feed...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="minimumSize">
-         <size>
-          <width>300</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>300</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Employees Present</string>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QListWidget" name="listwidget_signed_in"/>
-         </item>
-        </layout>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="employees_label">
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Employees Present</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listwidget_signed_in">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -54,6 +111,17 @@
      <layout class="QHBoxLayout" name="layout_buttons">
       <item>
        <widget class="QPushButton" name="button_signin">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>34</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Sign In</string>
         </property>
@@ -61,6 +129,17 @@
       </item>
       <item>
        <widget class="QPushButton" name="button_signout">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>34</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Sign Out</string>
         </property>
