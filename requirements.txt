@@ -1,6 +1,6 @@
 click==7.1.2
 cmake==3.17.3
-numpy==1.18.5
+numpy==1.22.0
 opencv-python-headless==4.2.0.34
 Pillow==7.1.2
 PyQt5==5.14.2
